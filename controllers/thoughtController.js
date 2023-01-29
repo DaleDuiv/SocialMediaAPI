@@ -9,7 +9,7 @@ module.exports = {
   },
   // Get a course
   getSingleThought(req, res) {
-    Thought.findOne({ _id: req.params.cthoughtId })
+    Thought.findOne({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that ID' })
